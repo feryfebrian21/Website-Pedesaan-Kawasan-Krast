@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedesaan di Kawasan Karst Gunungsewu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Pedesaan di Kawasan Karst Gunungsewu</h1>
+  </header>
+
+  <nav>
+    <ul>
+    <li><a href="index.html">Beranda</a></li>
+    <li><a href="tentangkami.html">Tentang kami</a></li>
+    <li><a href="kekayaanlokal.html">Kekayaan Lokal</a></li>
+    <li><a href="acara.html">Acara & Berita</a></li>
+    <li><a href="hubungikami.html">Hubungi Kami</a></li>
+    </ul>
+    </nav>
+
+  <div class="main-container">
+    <div class="sidebar">
+      <div class="agenda">
+        <h2>Agenda Wisata</h2>
+        <table>
+          <thead>
+          <tr>
+            <th>No</th>
+            <th>Hari</th>
+            <th>Tanggal</th>
+          </tr>
+          </thead>
+            <tr>
+            <td>1</td>
+            <td>Sabtu</td>
+            <td>21 Juni 2025</td>
+          </tr>
+            </tr>
+            <tr>
+            <td>2</td>
+            <td>Minggu</td>
+            <td>22 Juni 2025</td>
+          </tr>
+        </table>
+      </div>
+    <div class="galeri">
+     Galeri Foto
+  <div class="slider">
+    <img src="foto/slide1.jpg" class="slide active">
+    <img src="foto/slide2.jpeg" class="slide">
+    <img src="foto/slide3.jpg" class="slide">
+    <div class="dots">
+      <span class="dot active" onclick="currentSlide(0)"></span>
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+    </div>
+    </div>
+    </div>
+  </div>
+  <div class="content">
+<h2>Tentang Kami</h2>
+<p>
+  Pedesaan di Kawasan Karst Gunungsewu merupakan wilayah yang memiliki keunikan geologis, kekayaan budaya, serta potensi pariwisata yang luar biasa. Terletak di antara perbukitan kapur yang membentang di wilayah selatan Pulau Jawa, kawasan ini menyimpan pesona alam dan kearifan lokal yang patut dilestarikan.
+</p>
+
+<p>
+  Website ini dibuat sebagai sarana informasi dan promosi untuk mengenalkan potensi desa kami kepada masyarakat luas, baik dari segi budaya, sosial, ekonomi, maupun lingkungan. Melalui platform ini, kami ingin memperlihatkan bagaimana kehidupan masyarakat desa tetap harmonis dengan alam, serta berupaya menjaga keberlanjutan kawasan karst sebagai warisan geologi dunia.
+</p>
+
+<p>
+  Kami percaya bahwa pembangunan desa tidak hanya bertumpu pada infrastruktur, tetapi juga pada pelestarian budaya, lingkungan, dan partisipasi aktif masyarakat. Oleh karena itu, kami terus berupaya membangun desa yang mandiri, lestari, dan berdaya saing melalui inovasi berbasis potensi lokal.
+</p>
+
+<p>
+  Terima kasih telah mengunjungi website kami. Mari bersama-sama menjaga dan memajukan kawasan karst Gunungsewu untuk generasi masa depan.
+</p>
+
+    </div>
+    </div>
+    <footer>
+    <p>Hak Cipta © 2015 Pedesaan di Kawasan Karst Gunungsewu</p>
+    </footer>
+      <script>
+  let slideIndex = 0;
+  let slides = document.querySelectorAll('.slide');
+  let dots = document.querySelectorAll('.dot');
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active');
+      dots[i].classList.remove('active');
+    });
+    slides[index].classList.add('active');
+    dots[index].classList.add('active');
+  }
+
+  function currentSlide(index) {
+    slideIndex = index;
+    showSlide(slideIndex);
+  }
+
+  function nextSlide() {
+    slideIndex = (slideIndex + 1) % slides.length;
+    showSlide(slideIndex);
+  }
+
+  setInterval(nextSlide, 3000); // Ganti setiap 3 detik
+</script>
+</body>
+</html>

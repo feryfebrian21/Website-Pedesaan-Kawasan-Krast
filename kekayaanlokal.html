@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedesaan di Kawasan Karst Gunungsewu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Pedesaan di Kawasan Karst Gunungsewu</h1>
+  </header>
+
+  <nav>
+    <ul>
+    <li><a href="index.html">Beranda</a></li>
+    <li><a href="tentangkami.html">Tentang kami</a></li>
+    <li><a href="kekayaanlokal.html">Kekayaan Lokal</a></li>
+    <li><a href="acara.html">Acara & Berita</a></li>
+    <li><a href="hubungikami.html">Hubungi Kami</a></li>
+    </ul>
+    </nav>
+
+  <div class="main-container">
+    <div class="sidebar">
+      <div class="agenda">
+        <h2>Agenda Wisata</h2>
+        <table>
+          <thead>
+          <tr>
+            <th>No</th>
+            <th>Hari</th>
+            <th>Tanggal</th>
+          </tr>
+          </thead>
+            <tr>
+            <td>1</td>
+            <td>Sabtu</td>
+            <td>21 Juni 2025</td>
+          </tr>
+            </tr>
+            <tr>
+            <td>2</td>
+            <td>Minggu</td>
+            <td>22 Juni 2025</td>
+          </tr>
+        </table>
+      </div>
+    <div class="galeri">
+     Galeri Foto
+  <div class="slider">
+    <img src="foto/slide1.jpg" class="slide active">
+    <img src="foto/slide2.jpeg" class="slide">
+    <img src="foto/slide3.jpg" class="slide">
+    <div class="dots">
+      <span class="dot active" onclick="currentSlide(0)"></span>
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+    </div>
+    </div>
+    </div>
+  </div>
+  <div class="content">
+    <h2>Kekayaan Lokal</h2>
+     <div class="foto">
+    <figure>
+      <a href="tayub.html">
+      <img src="foto/tayub.jpg" alt="Foto 1">
+      </a>
+      <figcaption>Tarian Tayub</figcaption>
+    </figure>
+    <figure>
+        <a href="kirabbudaya.html">
+        <img src="foto/kirab budaya.jpg" alt="Foto 2">
+        </a>
+      <figcaption>Kirab Budaya</figcaption>
+    </figure>
+    <figure>
+      <a href="genduri.html">
+      <img src="foto/genduri.jpg" alt="Foto 3">
+      </a>
+      <figcaption>Tradisi Genduri</figcaption>
+    </figure>
+    <figure>
+      <a href="goaningrong.html">
+      <img src="foto/goa ningrong.jpeg" alt="Foto 4">
+      </a>
+      <figcaption>Goa Ngingrong</figcaption>
+    </figure>
+    <figure>
+      <a href="pasardigital.html">
+      <img src="foto/telaga jonge.jpg" alt="Foto 5">
+      </a>
+      <figcaption>Pasar Digital</figcaption>
+    </figure>
+    <figure>
+      <a href="pantai.html">
+      <img src="foto/sepanjang.jpg" alt="Foto 6">
+      </a>
+      <figcaption>Pantai Gunungkidul</figcaption>
+    </figure>
+  </div>
+
+    </div>
+    </div>
+    <footer>
+    <p>Hak Cipta © 2015 Pedesaan di Kawasan Karst Gunungsewu</p>
+    </footer>
+      <script>
+  let slideIndex = 0;
+  let slides = document.querySelectorAll('.slide');
+  let dots = document.querySelectorAll('.dot');
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active');
+      dots[i].classList.remove('active');
+    });
+    slides[index].classList.add('active');
+    dots[index].classList.add('active');
+  }
+
+  function currentSlide(index) {
+    slideIndex = index;
+    showSlide(slideIndex);
+  }
+
+  function nextSlide() {
+    slideIndex = (slideIndex + 1) % slides.length;
+    showSlide(slideIndex);
+  }
+
+  setInterval(nextSlide, 3000); // Ganti setiap 3 detik
+</script>
+</body>
+</html>
